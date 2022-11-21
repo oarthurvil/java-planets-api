@@ -10,4 +10,5 @@ import com.api.planets.models.Planet;
 @Repository
 public interface PlanetRepository extends JpaRepository<Planet, UUID>{
     
+    boolean existsByName(String planetName);
 }
