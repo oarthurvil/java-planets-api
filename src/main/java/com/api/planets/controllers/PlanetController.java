@@ -72,12 +72,6 @@ public class PlanetController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Planet not found.");
         }
 
-        /* Planet planet = planetOptional.get();
-
-        planet.setName(planetDto.getName());
-        planet.setClimate(planetDto.getClimate());
-        planet.setTerrain(planetDto.getTerrain()); */
-
         Planet planet = new Planet();
         BeanUtils.copyProperties(planetDto, planet);
         planet.setId(planetOptional.get().getId());
